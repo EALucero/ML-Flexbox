@@ -58,6 +58,7 @@ header {
 header .horiheader {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -73,15 +74,29 @@ header .burger-menu {
 }
 
 header .logo {
-    width: 50%;
+    width: 40%;
     margin: 0 10px 10px 25px;
-    padding-top: 25px;
-    max-width: 150px;
+    padding-top: 20px;
+    flex-grow: 0.4;
 }
 
-header p {
+header .logo img {
+    max-width: 120px;
+}
+
+header .ladode {
+    width: 40%;
+    flex-grow: 0.4;
+}
+
+header .p {
     margin: 10px auto 10px auto;
     text-align: center;
+    align-items: center;
+}
+
+header .p p {
+    margin-top: 15px;
 }
 
 /*******/
@@ -90,7 +105,7 @@ header p {
 
 nav {display: none;}
 
-#top-list {
+nav .top-list {
     margin-bottom: 10px;
 }
 
@@ -124,8 +139,8 @@ main section {
 .search-bar {
     background-color: white;
     display: inline-block;
-    margin: 30px;
-    width: 45%;
+    margin: 25px;
+    width: 70%;
     border: 1px solid var(--color-grisOscuro);
     max-width: 200px;
 }
@@ -134,8 +149,7 @@ main section {
     width: 80%;
     padding: 1px;
     max-width: 180px;
-    border: 0;
-   
+    border: 0;  
 }
 
 .search-bar button {
@@ -209,6 +223,32 @@ main section {
 
 @media (min-width: 556px) {
     main section { gap: 17px; }
+
+    header .horiheader {justify-content: space-evenly;}
+
+    header .logo,
+    header .p,
+    .ladode {
+        width: 25%;
+        flex-grow: 0.25;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+
+    nav .top-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
     .card {width: 140px;}
 }
 
