@@ -234,16 +234,18 @@ main section {
 
 @media (min-width: 556px) {
     main section { gap: 17px; }
-    
+
+    header .logo {
+        width: 25%;
+        flex-grow: 0.25;
+    }
     header .ladode,
     header .p{
         width: 30%;
         flex-grow: 0.3;
     }
-    header .logo {
-        width: 25%;
-        flex-grow: 0.25;
-    }
+
+    header .p p {margin-right: 5px;}
 
     .search-bar { margin-left: 15%;}
     .search-bar button {margin-left: 14%;}
@@ -268,6 +270,7 @@ main section {
 
 /* Desktop */
 @media (min-width: 769px) {
-    header .p {margin: 17px 8px 0 0;}
+    .search-bar input {width: 75%;}
+    header .p p{margin-top: 18px;}
     .card .card-content h4 {display: block;}
 }
